@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакти | Telegram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contact.html" class="active">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Зворотний зв'язок</h1>
+        <p>Заповніть форму, і я отримаю ваше повідомлення в Telegram!</p>
+
+        <form id="tg-form">
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <input type="email" id="email" placeholder="Ваш Email" required>
+            <textarea id="message" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit" id="submit-btn">Надіслати повідомлення</button>
+        </form>
+
+        <p id="status-msg" style="margin-top: 15px; font-weight: bold;"></p>
+    </main>
+
+    <script>
+        const TOKEN = "8606146199:AAHZVdAWQAcWCSJj8l4FpNpEzxqgID6npT4"; 
+        const CHAT_ID = "929279314";
+        const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+        document.getElementById('tg-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            let fullMessage = `<b>📩 Нова заявка!</b>\n`;
+            fullMessage += `<b>Від кого:</b> ${name}\n`;
+            fullMessage += `<b>Пошта:</b> ${email}\n`;
+            fullMessage += `<b>Текст:</b> ${message}`;
+
+            const status = document.getElementById('status-msg');
+
+            fetch(URI_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    parse_mode: 'html',
+                    text: fullMessage
+                })
+            })
+            .then(res => {
+                if(res.ok) {
+                    status.innerText = "✅ Надіслано! Перевір Telegram.";
+                    status.style.color = "green";
+                    this.reset();
+                } else {
+                    status.innerText = "❌ Помилка. Перевір токен та ID.";
+                    status.style.color = "red";
+                }
+            })
+            .catch(err => {
+                status.innerText = "⚠️ Помилка мережі.";
+                status.style.color = "orange";
+            });
+        });
+    </script>
+</body>
+</html>
