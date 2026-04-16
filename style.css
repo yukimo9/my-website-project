@@ -18,3 +18,46 @@ button { background: #333; color: white; cursor: pointer; }
     margin-right: 12px; /* Це створить ідеальний пробіл */
     color: #f1c40f;
 }
+/* --- BACKGROUND VARIANT 1: Premium Texture --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Якісна текстура темного дерева з Unsplash */
+    background-image: url('https://images.unsplash.com/photo-1596261176231-1e96a2f7f9b8?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover; /* Заповнити весь екран */
+    background-position: center; /* Центрувати текстуру */
+    background-attachment: fixed; /* Зафіксувати фон при скролі (паралакс) */
+    background-color: #2c3e50; /* Резервний колір на випадок збою */
+    color: #333; /* Колір тексту в білій картці */
+}
+
+/* Переконайся, що твій .container має фон і тінь, як на скріншоті */
+/* --- ВИПРАВЛЕНИЙ КОНТЕЙНЕР ДЛЯ ЧИТАБЕЛЬНОСТІ --- */
+.container {
+    background: white; /* Чистий білий фон картки, як на скріншоті */
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 150px auto 100px; /* Великий відступ зверху, щоб картка була під меню */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.4); /* Глибока тінь на темному фоні */
+    
+    /* ОЦЕЙ РЯДОК ВСЕ ВИПРАВИТЬ */
+    color: #1a1a1a !important; /* Явно робимо весь текст чорним */
+}
+
+/* Додамо також явний стиль для заголовків та посилань у картці */
+.container h1, 
+.container h2, 
+.container p, 
+.container a:not(.btn) {
+    color: #1a1a1a !important;
+}
+
+/* Переконаємося, що кнопки всередині картки мають свій стиль */
+.hero-btns .btn {
+    text-transform: uppercase;
+    font-weight: 600;
+}
