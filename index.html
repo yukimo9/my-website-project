@@ -3,23 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна | Сайт</title>
+    <title>Yukimo | Естетика робочого простору</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+    <div class="container flex-nav">
+        <div class="logo">
+            <i class="fas fa-keyboard logo-icon"></i>
+            <span>Yukimo</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Головна</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contact.html">Контакти</a></li>
+                <li><a href="index.html" class="nav-link-home">Головна</a></li>
+                <li><a href="gallery.html" class="nav-link-coll">Колекція</a></li>
+                <li><a href="contact.html" class="nav-link-cont">Замовити</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
+
     <main>
-        <h1>Вітаю на моєму сайті!</h1>
-        <img src="https://yukimo9.s-ul.eu/a2YGWkDY" alt="Головна" class="main-img">
+        <section class="hero hero-lifestyle">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Твій простір.<br>Твої правила.</h1>
+                <p>Ексклюзивні аксесуари Yukimo для тих, хто цінує комфорт та бездоганний мінімалізм у кожній деталі.</p>
+                <div class="hero-btns">
+                    <a href="gallery.html" class="btn btn-primary">Дивитись каталог</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Філософія <span class="accent-text">Yukimo</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">
+                        Ми віримо, що оточення прямо впливає на продуктивність. Yukimo створює інструменти, які перетворюють рутинну роботу на творчий процес. Наш дизайн — це баланс між функціональністю та чистою естетикою.
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card card-white">
+                        <div class="feature-icon"><i class="fas fa-fingerprint"></i></div>
+                        <h3>Унікальний дизайн</h3>
+                        <p>Кожна клавіатура та аксесуар мають обмежений тираж та індивідуальний серійний номер.</p>
+                    </div>
+                    <div class="feature-card card-white">
+                        <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                        <h3>Ергономіка</h3>
+                        <p>Наші продукти розроблені з урахуванням анатомії людини для тривалої комфортної роботи.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer><p>&copy; Illia Hrabovets</p></footer>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Yukimo Tech Lifestyle Store.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

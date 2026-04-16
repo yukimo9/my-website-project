@@ -7,18 +7,24 @@
 </head>
 <body>
     <header>
+    <div class="container flex-nav">
+        <div class="logo">
+            <i class="fas fa-keyboard logo-icon"></i>
+            <span>Yukimo</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contact.html" class="active">Контакти</a></li>
+                <li><a href="index.html" class="nav-link-home">Головна</a></li>
+                <li><a href="gallery.html" class="nav-link-coll">Колекція</a></li>
+                <li><a href="contact.html" class="nav-link-cont">Замовити</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
     <main>
         <h1>Зворотний зв'язок</h1>
-        <p>Заповніть форму, і я отримаю ваше повідомлення в Telegram!</p>
+        <p>Заповніть форму, і ми отримаємо ваше повідомлення у Telegram!</p>
 
         <form id="tg-form">
             <input type="text" id="name" placeholder="Ваше ім'я" required>
@@ -76,3 +82,4 @@
     </script>
 </body>
 </html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

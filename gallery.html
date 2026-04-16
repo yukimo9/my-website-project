@@ -2,29 +2,45 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Галерея</title>
+    <title>Колекція Yukimo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
+    <div class="container flex-nav">
+        <div class="logo">
+            <i class="fas fa-keyboard logo-icon"></i>
+            <span>Yukimo</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="gallery.html" class="active">Галерея</a></li>
-                <li><a href="contact.html">Контакти</a></li>
+                <li><a href="index.html" class="nav-link-home">Головна</a></li>
+                <li><a href="gallery.html" class="nav-link-coll">Колекція</a></li>
+                <li><a href="contact.html" class="nav-link-cont">Замовити</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <h1>Галерея робіт</h1>
+    </div>
+</header>
+
+    <main class="container">
+        <h1 style="margin-top: 100px; text-align: center; color: #333;">Наша Колекція</h1>
+        
         <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://yukimo9.s-ul.eu/nIGQCtrH"></div>
-            <div class="gallery-item"><img src="https://yukimo9.s-ul.eu/9wN0vDzU"></div>
-            <div class="gallery-item"><img src="https://yukimo9.s-ul.eu/FzWqEyL9"></div>
+            <div class="gallery-item">
+                <img src="https://yukimo9.s-ul.eu/ZYoRLtvo" alt="Keyboard">
+                <div class="caption">Механічна клавіатура <br> <strong>$180</strong></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://yukimo9.s-ul.eu/SRQY08m2" alt="Mouse">
+                <div class="caption">Ергономічна миша <br> <strong>$85</strong></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://yukimo9.s-ul.eu/bfY2CFQW" alt="Pad">
+                <div class="caption">Килим для миші <br> <strong>$45</strong></div>
+            </div>
         </div>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/_OLO5OJMhyk?si=mTn5HQcoF5o_WiQq" frameborder="0" allowfullscreen></iframe>
         </div>
     </main>
 </body>
-</html>
+</html> 

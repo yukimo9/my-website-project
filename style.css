@@ -13,3 +13,8 @@ main { max-width: 800px; margin: 20px auto; background: white; padding: 20px; bo
 form { display: flex; flex-direction: column; gap: 10px; }
 input, textarea, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
 button { background: #333; color: white; cursor: pointer; }
+/* Додаємо відступ між іконкою клавіатури та текстом Yukimo */
+.logo-icon {
+    margin-right: 12px; /* Це створить ідеальний пробіл */
+    color: #f1c40f;
+}
