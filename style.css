@@ -14,9 +14,16 @@ form { display: flex; flex-direction: column; gap: 10px; }
 input, textarea, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
 button { background: #333; color: white; cursor: pointer; }
 /* Додаємо відступ між іконкою клавіатури та текстом Yukimo */
+/* Змінюємо колір значка клавіатури на чорний */
 .logo-icon {
-    margin-right: 12px; /* Це створить ідеальний пробіл */
-    color: #f1c40f;
+    color: #000000; /* Чорний колір замість золотого */
+    margin-right: 15px; /* Пробіл між іконкою та текстом, який ми додавали раніше */
+    transition: 0.3s;
+}
+
+/* Якщо хочеш, щоб при наведенні він все одно ставав золотим або іншим: */
+.logo:hover .logo-icon {
+    color: #f1c40f; 
 }
 /* --- BACKGROUND VARIANT 1: Premium Texture --- */
 body {
